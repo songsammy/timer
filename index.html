@@ -1,21 +1,20 @@
 <html>
 	<head>
 		<script>
-                       function stat{
-			       alert("started")
-			       window.st=new Date.gettime()
+                       function stat(){
+			       window.st=new Date().getTime()
 
 		       }
-function ed{
-	window.st=new Daye.gettime()-window.st
-	window.st/=1000-60
-	document.getElementById("res").text=window.st
+function ed(){
+	window.st=new Date().getTime()-window.st
+	window.st/=1000
+	alert("实际用时"+st+",与60秒相差"+(st-60)+"秒")
 }
 		</script>
 	</head>
-	<body>
-		<button onclick='stat'>点我开始</button>
-		<button onclick='ed'>点我结束</button>
+	<body><p>点击开始按钮，默默数60秒，点击结束按钮，查看真实秒数。</p><br/>
+		<button onclick="stat()">点我开始</button>
+		<button onclick="ed()">点我结束</button>
 		<div id='res'></div>
 	</body>
 </html>
